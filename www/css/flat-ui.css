@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'Flat-UI-Icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="fui-"] {
+*/
+.fui-arrow-right,
+.fui-arrow-left,
+.fui-cmd,
+.fui-check-inverted,
+.fui-heart,
+.fui-location,
+.fui-plus,
+.fui-check,
+.fui-cross,
+.fui-list,
+.fui-new,
+.fui-video,
+.fui-photo,
+.fui-volume,
+.fui-time,
+.fui-eye,
+.fui-chat,
+.fui-search,
+.fui-user,
+.fui-mail,
+.fui-lock,
+.fui-gear,
+.fui-radio-unchecked,
+.fui-radio-checked,
+.fui-checkbox-unchecked,
+.fui-checkbox-checked,
+.fui-calendar-solid,
+.fui-pause,
+.fui-play,
+.fui-check-inverted-2 {
+  display: inline-block;
+  font-family: 'Flat-UI-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+.fui-arrow-right:before {
+  content: "\e02c";
+}
+.fui-arrow-left:before {
+  content: "\e02d";
+}
+.fui-cmd:before {
+  content: "\e02f";
+}
+.fui-check-inverted:before {
+  content: "\e006";
+}
+.fui-heart:before {
+  content: "\e007";
+}
+.fui-location:before {
+  content: "\e008";
+}
+.fui-plus:before {
+  content: "\e009";
+}
+.fui-check:before {
+  content: "\e00a";
+}
+.fui-cross:before {
+  content: "\e00b";
+}
+.fui-list:before {
+  content: "\e00c";
+}
+.fui-new:before {
+  content: "\e00d";
+}
+.fui-video:before {
+  content: "\e00e";
+}
+.fui-photo:before {
+  content: "\e00f";
+}
+.fui-volume:before {
+  content: "\e010";
+}
+.fui-time:before {
+  content: "\e011";
+}
+.fui-eye:before {
+  content: "\e012";
+}
+.fui-chat:before {
+  content: "\e013";
+}
+.fui-search:before {
+  content: "\e01c";
+}
+.fui-user:before {
+  content: "\e01d";
+}
+.fui-mail:before {
+  content: "\e01e";
+}
+.fui-lock:before {
+  content: "\e01f";
+}
+.fui-gear:before {
+  content: "\e024";
+}
+.fui-radio-unchecked:before {
+  content: "\e02b";
+}
+.fui-radio-checked:before {
+  content: "\e032";
+}
+.fui-checkbox-unchecked:before {
+  content: "\e033";
+}
+.fui-checkbox-checked:before {
+  content: "\e034";
+}
+.fui-calendar-solid:before {
+  content: "\e022";
+}
+.fui-pause:before {
+  content: "\e03b";
+}
+.fui-play:before {
+  content: "\e03c";
+}
+.fui-check-inverted-2:before {
+  content: "\e000";
+}
+/* 62px */
+/* 52px */
+/* 40px */
+/* 29px */
+/* 28px */
+/* 24px */
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.drop-ie-gradient {
+  filter: unquote("progid:DXImageTransform.Microsoft.gradient(enabled = false)");
+}
+.dropdown-arrow-inverse {
+  border-bottom-color: #34495e !important;
+  border-top-color: #34495e !important;
+}
+
+.btn,
+.btn-group > .btn,
+.btn-group > .dropdown-menu,
+.btn-group > .popover {
+  font-size: 14.994px;
+  /* 15px */
+
+  font-weight: 500;
+}
+.btn-label{
+	color:#fff;
+}
+
+.btn {
+  border: none;
+  background:transparent;
+  color: #ffffff;
+  padding: 4px 12px 10px;
+  line-height: 20px;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-backface-visibility: hidden;
+}
+.btn:hover,
+.btn:focus,
+.btn-group:focus .btn.dropdown-toggle {
+  background:transparent;
+  color: #ffffff;
+  outline: none;
+  -webkit-backface-visibility: hidden;
+}
+.btn:active,
+.btn-group.open .btn.dropdown-toggle,
+.btn.active {
+  background:transparent;
+  color: rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn.disabled,
+.btn[disabled] {
+  background-color: #bdc3c7;
+  color: rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.btn.btn-large {
+  font-size: 16.996px;
+  /* 17px */
+
+  line-height: 20px;
+  padding: 12px 18px 13px;
+}
+.btn.btn-large > [class^="fui-"] {
+  top: 0;
+}
+.btn.btn-large > [class^="fui-"].pull-right {
+  margin-right: -2px;
+}
+.btn-info a{
+  color:#000;;
+	
+}
+.btn.btn-info {
+  color:#000;;
+  background:rgba(255,255,255,0.8);
+  border-color:#000;
+}
+.btn.btn-info:hover,
+.btn.btn-info:focus,
+.btn-group:focus .btn.btn-info.dropdown-toggle {
+  color:#000;;
+  background:rgba(255,255,255,1.0);
+  border-color:#000;
+}
+.btn.btn-info:active,
+.btn-group.open .btn.btn-info.dropdown-toggle,
+.btn.btn-info.active {
+  color:#000;;
+  background:rgba(255,255,255,0.8);
+  border-color:#000;
+}
+.btn-inverse a{
+  color:#fff;;
+	
+}
+.btn.btn-inverse {
+  color:#fff;;
+  background:rgba(0,0,0,0.8);
+  border-color:#000;
+}
+.btn.btn-inverse:hover,
+.btn.btn-inverse:focus,
+.btn-group:focus .btn.btn-inverse.dropdown-toggle {
+  color:#fff;;
+  background:rgba(0,0,0,1.0);
+  border-color:#000;
+}
+.btn.btn-inverse:active,
+.btn-group.open .btn.btn-inverse.dropdown-toggle,
+.btn.btn-inverse.active {
+  color:#fff;;
+  background:rgba(0,0,0,0.8);
+  border-color:#000;
+}
+
+.btn > [class^="fui-"] {
+  margin: 0 4px;
+  position: relative;
+  top: 1px;
+  vertical-align: top;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.btn > [class^="fui-"].pull-right {
+  margin-right: 0px;
+}
+.btn-toolbar .btn.active {
+  color: #ffffff;
+}
+.btn-toolbar .btn:first-child {
+  -webkit-border-radius: 6px 0 0 6px;
+  -moz-border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
+}
+.btn-toolbar .btn:last-child {
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+}
+.btn-toolbar .btn > [class^="fui-"] {
+  font-size: 16px;
+  top: 0;
+}
+.btn-tip {
+  font-weight: 300;
+  padding-left: 10px;
+}
+.btn-group > .btn {
+  border-radius: 0;
+  text-align: center;
+}
+.btn-group > .btn:active + .btn,
+.btn-group > .btn.active + .btn {
+  border-left-color: transparent;
+}
+.btn-group > .btn:first-of-type {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.btn-group > .btn:last-of-type {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.btn-group > .btn + .btn {
+  margin-left: 0;
+}
+.btn-group > .btn + .dropdown-toggle {
+  border-left: 2px solid rgba(52, 73, 94, 0.15);
+  padding-left: 13px;
+  padding-right: 13px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-group > .btn + .dropdown-toggle .caret {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.btn-group > .btn.btn-huge + .dropdown-toggle .caret {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.btn-group > .btn.btn-small + .dropdown-toggle .caret {
+  margin-left: 0;
+  margin-right: 0;
+}

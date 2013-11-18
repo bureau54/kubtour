@@ -1,0 +1,372 @@
+/* 
+* copyright 2013 bureau54.com
+* 
+* www.bureau54.com
+*/
+
+/***** Screen 960px *****/
+
+#kubtour-start{
+	padding-bottom:40px 0 60px 0;
+}
+.topbar{
+	position:fixed;
+	top:0;
+	left:0;
+	height:40px;
+	background:rgba(255,255,255,0.8);
+	width:100%;
+	z-index:2000;
+	text-align:center;
+
+	
+}
+.topbar img{
+	margin-top:10px;
+}
+h1.logo{
+	padding-left:28px;
+}
+
+.topnav-btn, .topnav-btn:hover{
+	padding: 15px 0 0 0;
+	color:#000;
+	font-size:28px;
+}
+.info-btn{
+	position:relative;
+	margin-right:20px;
+	float:right;
+	width:35px;
+	height:35px;
+}
+.scan-btn, .scan-btn:hover{
+	color:#000;
+	font-size:48px;
+	width:64px;
+	height:64px;	
+}
+.btn-player{
+	margin:0 0 0 5px;
+	padding:0;
+}
+
+.btn-player a{
+	font-size:26px;
+	line-height:30px;
+}
+
+.ui-loader{
+	display:none;
+}
+
+.audio-container{
+	position:relative;
+}
+
+#logo-big-front{
+	position:relative;
+	padding-top:110px;
+}
+
+#logo-big-front img{
+	width:250px;
+	height:auto;
+}
+
+.footer{
+	position:fixed;
+	bottom:0px;
+	left:0;
+	width:100%;
+	background:rgba(255,255,255,0.8);
+	padding-top:20px;
+	text-align:center;
+	z-index:10;
+	
+}
+.footer-big{
+	position:fixed;
+	bottom:0px;
+	height:250px;
+	width:100%;
+	background:rgba(255,255,255,0.8);
+	padding-top:20px;
+	text-align:center;
+	
+}
+.footer-text{
+	color:#000;
+	margin:0 16px 0 16px;
+	
+}
+
+span.tooltip {
+      position: absolute;
+	  top: 70px;
+	  left: 100px;
+	  z-index:1000;
+      width: 300px;
+      height: 150px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      background: rgb(0, 0, 0);
+      border: 4px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.0976563) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.0976563) 1px 1px 2px 0px;
+	  display:none;
+}
+
+span.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 20px;
+      border-style: solid;
+      border-color: #000 transparent transparent transparent;
+      top: 165px;
+      left: 50px;
+}
+
+/***** Screen Bigger than 960px *****/
+@media only screen and (min-width:1200px) {
+
+.topbar{
+	position:fixed;
+	top:0;
+	height:40px;
+	width:100%;
+	z-index:2000;
+	text-align:center;
+
+	
+}
+
+.footer{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	padding-top:20px;
+	text-align:center;
+	
+}
+.footer-big{
+	position:fixed;
+	bottom:0px;
+	height:250px;
+	width:100%;
+	padding-top:20px;
+	text-align:center;
+	
+}
+.footer-text{
+	color:#fff;
+	
+}
+
+span.tooltip {
+      position: absolute;
+	  top: 70px;
+	  left: 100px;
+	  z-index:1000;
+      width: 300px;
+      height: 150px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      background: rgb(0, 0, 0);
+      border: 4px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.0976563) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.0976563) 1px 1px 2px 0px;
+	  display:none;
+}
+
+span.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 20px;
+      border-style: solid;
+      border-color: #000 transparent transparent transparent;
+      top: 165px;
+      left: 50px;
+}
+
+}
+
+
+
+/***** Tablet (Smaller than 959px) *****/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+.topbar{
+	position:fixed;
+	top:0;
+	height:40px;
+	width:100%;
+	z-index:2000;
+	text-align:center;
+
+	
+}
+
+.footer-big{
+	position:fixed;
+	bottom:0px;
+	height:150px;
+	width:100%;
+	padding-top:20px;
+	text-align:center;
+	
+}
+.footer{
+	position:fixed;
+	bottom:0px;
+	height:100px;
+	width:100%;
+	padding-top:10px;
+	
+}
+.footer-text{
+	color:#fff;
+	font-size:14px;
+	
+}
+
+#logo-big-front{
+	position:relative;
+	padding-top:30px;
+}
+#logo-big-front img{
+	width:120px;
+	height:auto;
+}
+
+
+}
+
+
+
+/***** Phone (portrait 300px) *****/
+@media only screen and (max-width: 767px) {
+.topbar{
+	position:fixed;
+	top:0;
+	height:40px;
+	width:100%;
+	z-index:2000;
+	text-align:center;
+
+	
+}
+.footer-big{
+	position:fixed;
+	bottom:0px;
+	height:150px;
+	width:100%;
+	padding-top:20px;
+	text-align:center;
+	
+}
+.footer{
+	position:fixed;
+	bottom:0px;
+	height:100px;
+	width:100%;
+	padding-top:10px;
+	
+}
+.footer-text{
+	color:#fff;
+	font-size:12px;
+	
+}
+#logo-big-front{
+	position:relative;
+	padding-top:30px;
+}
+#logo-big-front img{
+	width:120px;
+	height:auto;
+}
+
+span.tooltip {
+      position: absolute;
+	  top: 70px;
+	  left: 20px;
+	  z-index:1000;
+      width: 300px;
+      height: 150px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      background: rgb(0, 0, 0);
+      border: 4px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.0976563) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.0976563) 1px 1px 2px 0px;
+	  display:none;
+}
+
+span.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 20px;
+      border-style: solid;
+      border-color: #000 transparent transparent transparent;
+      top: 165px;
+      left: 50px;
+}
+
+
+
+}
+
+
+	
+/***** Phone (landscape 420px) *****/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+.footer-big{
+	position:fixed;
+	bottom:0px;
+	height:150px;
+	width:100%;
+	background:rgba(0,0,0,0.8);
+	padding-top:20px;
+	text-align:center;
+	
+}
+#logo-big-front{
+	position:relative;
+	padding-top:30px;
+}
+#logo-big-front img{
+	width:120px;
+	height:auto;
+}
+
+
+}
+
+
+
+/***** Retina *****/
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+
+
+
+}

@@ -1,0 +1,163 @@
+/* 
+* BUREAU54 AMAZIUM STRUCTURE
+* based on Mike Ballan amazium.co.uk
+* copyright 2013 bureau54.com
+* www.bureau54.com
+*/
+
+
+/***** Reset & Basics *****/
+
+
+@font-face {
+  font-family: "HelveticaNeueLtCn";
+  src: url('fonts/HelveticaNeueLTCom-LtCn.eot');
+  src: url('fonts/HelveticaNeueLTCom-LtCn.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueLTCom-LtCn.woff') format('woff'), url('fonts/HelveticaNeueLTCom-LtCn.ttf') format('truetype'), url('fonts/HelveticaNeueLTCom-LtCn.svg#HelveticaNeueLtCn') format('svg');
+}
+@font-face {
+  font-family: 'Flat-UI-Icons';
+  src: url('fonts/flat-ui/Flat-UI-Icons.eot');
+  src: url('fonts/flat-ui/Flat-UI-Icons.eot?#iefix') format('embedded-opentype'), url('fonts/flat-ui/Flat-UI-Icons.woff') format('woff'), url('fonts/flat-ui/Flat-UI-Icons.ttf') format('truetype'), url('fonts/flat-ui/Flat-UI-Icons.svg#Flat-UI-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, div, span, applet,
+object, iframe, h1, h2, h3, h4,
+h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd,
+q, s, samp, small, strike, strong,
+sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details,
+embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output,
+ruby, section, summary, time, mark,
+audio, video 							{ margin: 0; padding: 0; border: 0; font-size:100%; font:inherit; vertical-align:baseline; }
+
+article, aside, details, figcaption, 
+figure, footer, header, hgroup, menu, 
+nav, section 							{ display:block; }
+
+body 									{ line-height:1; }
+header{z-index:2000;}
+ol, ul 									{ list-style:none; }
+
+blockquote, q 							{ quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after 						{ content:''; content:none; }
+
+table 									{ border-collapse:collapse; border-spacing:0; }
+	
+/***** Basic Styles *****/
+
+html 									{ overflow:hidden;}
+body									{ margin:20px 0 0 0; padding:0; background-color:#fff; font:13px "HelveticaNeueLtCn", "Trebuchet MS", Helvetica, sans-serif; color:#333; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; }
+
+/***** Typography *****/
+
+h1, h2, h3, h4, h5, h6 					{ margin:0; padding:0; font-family:"HelveticaNeueLtCn", "Times New Roman", Helvetica, Arial, sans-serif; font-weight:normal; display:inline-block;} 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a 		{ font-weight:inherit; }
+h1 										{ margin:0 0 10px 0; padding:0; font-size:36px; line-height:40px; color:#000; }
+h2										{ margin:0 0 10px 0; padding:0; font-size:30px; line-height:34px; color:#000; }
+h3 										{ margin:0 0 10px 0; padding:0; font-size:24px; line-height:28px; color:#000; }
+h4 										{ margin:0 0 10px 0; padding:0; font-size:18px; line-height:22px; color:#000; }
+h5 										{ margin:0 0 10px 0; padding:0; font-size:14px; line-height:16px; color:#000; }
+h6 										{ margin:0 0 10px 0; padding:0; font-size:12px; line-height:16px; color:#000; }
+
+p 										{ margin:0; padding:0 0 10px 0; line-height:20px; }
+a.p{z-index:2000;}
+strong 									{ font-weight:bold; }
+em 										{ font-style:italic;}
+small 									{ font-size:80%; }
+sup, sub								{ height:0;	line-height:5px; vertical-align:baseline; _vertical-align:bottom; position:relative; font-size:80%; }
+sup 									{ bottom:5px; }
+sub 									{ top:5px; }
+code, pre 								{ padding:0 3px 2px; color:#333; font-size:11px; }
+code									{ padding:0 4px 2px 4px; background-color:#000; border:1px solid #000; color:#f1f1f1; }
+
+
+/***** Links *****/
+
+a:link 									{ color:#000; text-decoration:none; outline:0; }
+a:visited 								{ color:#000; text-decoration:none; outline:0; }
+a:active 								{ color:#000; text-decoration:none; outline:0; }
+a:hover 			 					{ color:#000; text-decoration:none; outline:0; }
+a:focus 								{ -moz-outline-style:none; }
+
+
+
+/***** Images iFrames & Videos  *****/
+
+img 									{ border:0; -ms-interpolation-mode:bicubic; }
+.max-img 								{ width:100%; height:auto; }		
+.media 									{ position:relative; margin:0 0 15px 0;	padding-bottom:51%; padding-top:30px; height:0; overflow:hidden; border:1px solid #ccc; }
+.media iframe,
+.media object,  
+.media embed 							{ position:absolute; top:0; left:0; width:100%; height:100%; }
+
+/***** Buttons  *****/
+
+a.btn, .btn 							{ margin:5px 0 5px 0; padding:4px 25px 4px 10px; display:block; color:#fff; cursor:pointer; }
+a:hover.btn 							{ text-decoration:none; color:#fff;}
+
+
+/***** Global Classes *****/
+
+.img-left   							{ float:left; margin:0 30px 30px 0; border:none; }
+.img-right  							{ float:right; margin:0 0 30px 30px; border:none; }
+	
+.clear       							{ clear:both; }
+.float-left 							{ float:left; }
+.float-right   							{ float:right; }
+
+.text-big								{ color:#a2bd30; font-weight:bold; line-height:26px; }
+.text-left    							{ text-align:left; }
+.text-right    							{ text-align:right; }
+.text-center   							{ text-align:center; }
+.text-justify  							{ text-align:justify; }
+
+.normal									{ font-weight:normal; }
+.bold          							{ font-weight:bold; }
+.italic        							{ font-style:italic; }
+.underline     							{ border-bottom:1px solid; }
+.highlight     							{ padding:0 3px 2px; color:#333; font-size:11px; background:#00deff; font-weight:bold; }
+.intro									{ font-size:130%; line-height:130%; }
+
+.nopadding 						   		{ padding:0; }
+.noindent  						   		{ margin-left:0; padding-left:0; }
+.nobullet  					   			{ list-style:none; list-style-image:none; }
+
+.block									{ display:block; }
+.hidden									{ display:none; }
+.hide 									{ display:none; }
+
+.spacer                                 {margin-top:50px;}
+
+
+@-moz-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Firefox */
+@-webkit-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Webkit */
+@-ms-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* IE */
+@keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Opera and prob css3 final iteration */
+.blink {
+-moz-transition:all 1s ease-in-out;
+-webkit-transition:all 1s ease-in-out;
+-o-transition:all 1s ease-in-out;
+-ms-transition:all 1s ease-in-out;
+transition:all 1s ease-in-out;
+/* order: name, direction, duration, iteration-count, timing-function */  
+-moz-animation:blink normal 2s infinite ease-in-out; /* Firefox */
+-webkit-animation:blink normal 2s infinite ease-in-out; /* Webkit */
+-ms-animation:blink normal 2s infinite ease-in-out; /* IE */
+animation:blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}​
+
+/***** Back to Top *****/
+
+#toTop 									{ display:none; text-decoration:none; position:fixed; bottom:10px; right:10px; overflow:hidden; width:51px; height:51px; border:none; text-indent:-999px; background:url(../images/ui.totop.png) no-repeat left top; }
+#toTopHover 							{ background:url(../images/ui.totop.png) no-repeat left -51px; width:51px; height:51px; display:block; overflow:hidden; float:left; opacity: 0; -moz-opacity: 0; filter:alpha(opacity=0); }
+#toTop:active, #toTop:focus 			{ outline:none; }

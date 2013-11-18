@@ -28,6 +28,8 @@ h1.logo{
 	padding-left:28px;
 }
 
+p{ margin:10px;}
+
 .topnav-btn, .topnav-btn:hover{
 	padding: 15px 0 0 0;
 	color:#000;

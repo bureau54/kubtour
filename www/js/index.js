@@ -55,7 +55,7 @@ var app = {
     scan: function() {
         console.log('scanning');
         
-       /* var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) { 
 
@@ -70,7 +70,7 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
-		*/	
+		
 			
 			$.ajax( {
                 url:'http://www.b54server.ch/kubtour/pois/schollenriet.html',
@@ -84,20 +84,17 @@ var app = {
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
             }
-          /*  
+            
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
-        } );*/
+        } );
     },
 	
 	showMap: function(){
 		
 		$("#kubtour-poi").css('display', 'none');
-	    $("#map_canvas").css('width', $(window).width()+'px');
-		$("#map_canvas").css('height', $(window).height()+'px');
-	   
-
+	    
 		$("#map_canvas").css('display', 'block');
 		
 	},

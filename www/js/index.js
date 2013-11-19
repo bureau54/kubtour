@@ -28,7 +28,8 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.getElementById('scan').addEventListener('click', this.scan, false);
-        document.getElementById('encode').addEventListener('click', this.encode, false);
+		document.getElementById('map').addEventListener('click', this.showMap, false);
+        
     },
 
     // deviceready Event Handler
@@ -54,7 +55,7 @@ var app = {
     scan: function() {
         console.log('scanning');
         
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+       /* var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) { 
 
@@ -69,21 +70,43 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
-            /*
+		*/	
+			
+			$.ajax( {
+                url:'http://www.b54server.ch/kubtour/pois/schollenriet.html',
+                success:function(data) {
+                $('#kubtour-poi').html(data);
+		  
+                  $( function() { $( 'audio' ).audioPlayer(); } );
+	            }}); 
+			
+            
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
             }
-            */
+          /*  
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
-        } );
+        } );*/
     },
+	
+	showMap: function(){
+		
+		$("#kubtour-poi").css('display', 'none');
+	    $("#map_canvas").css('width', $(window).width()+'px');
+		$("#map_canvas").css('height', $(window).height()+'px');
+	   
+
+		$("#map_canvas").css('display', 'block');
+		
+	},
+
 
     encode: function() {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
+        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.bureau54.com", function(success) {
             alert("encode success: " + success);
           }, function(fail) {
             alert("encoding failed: " + fail);

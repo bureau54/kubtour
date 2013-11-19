@@ -73,7 +73,7 @@ var app = {
 		
 			
 			$.ajax( {
-                url:'http://www.b54server.ch/kubtour/pois/schollenriet.html',
+                url: result.text,
                 success:function(data) {
                 $('#kubtour-poi').html(data);
 		  

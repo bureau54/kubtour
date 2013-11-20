@@ -66,13 +66,15 @@ var app = {
             //document.getElementById("info").innerHTML = result.text;
             console.log(result);
 		
-			
 			$.ajax( {
                 url: result.text,
                 success:function(data) {
-                $('#kubtour-poi').html(data);
+                  
+				  if (data != ""){
+				    $('#kubtour-poi').html(data);
 		  
-                  $( function() { $( 'audio' ).audioPlayer(); } );
+                    $( function() { $( 'audio' ).audioPlayer(); } );
+				  }
 	            }}); 
 			
             
@@ -88,12 +90,73 @@ var app = {
 	
 	showMap: function(){
 		
-		$("#kubtour-poi").css('display', 'none');
-	    
-		$("#map_canvas").css('display', 'block');
+		var lat;
+        var longitude;
+		
+		var options = {
+        enableHighAccuracy: true,   //  boolean (default: false)
+        timeout: 10000,             //  in milliseconds (default: no limit)
+        maximumAge: 1000            //  in milliseconds (default: 0)
+    };
+ 
+    navigator.geolocation.getCurrentPosition(showPosition, positionError, options);
+ 
+    function showPosition(position) {
+        var coords = position.coords;
+ 
+        lat = coords.latitude;
+        longitude = coords.longitude;
+ 
+        showMap();
+    }
+ 
+    function positionError(e) {
+        switch (e.code) {
+            case 0: // UNKNOWN_ERROR
+                logMsg("The application has encountered an unknown error while trying to determine your current location. Details: " + e.message);
+                break;
+            case 1: // PERMISSION_DENIED
+                logMsg("You chose not to allow this application access to your location.");
+                break;
+            case 2: // POSITION_UNAVAILABLE
+                logMsg("The application was unable to determine your location.");
+                break;
+            case 3: // TIMEOUT
+                logMsg("The request to determine your location has timed out.");
+                break;
+        }
+    }
+ 
+    function logMsg(msg) {
+        alert(msg);
+    }
+ 
+    function showMap() {
+        $('#map_canvas').gmap().bind('init', function () {
+            $('#map_canvas').gmap('addMarker', {
+                'position': new google.maps.LatLng(lat, longitude),
+                'visible': true,
+                'bounds': true, //To get the marker in center
+                'animation': google.maps.Animation.DROP,
+                'icon': 'img/pin.png'
+            }).click(function () {
+                $('#map_canvas').gmap('openInfoWindow', { 'content': 'You are here' }, this);
+            });
+           $('#map_canvas').gmap('option', 'zoom', 8);
+           $('#map_canvas').gmap('addShape', 'Circle', { 'strokeColor': "#8DAFDB", 'strokeOpacity': 0.8, 'strokeWeight': 2, 'fillColor': "#DADEE0", 'fillOpacity': 0.35, 'center': new google.maps.LatLng(lat, longitude), 'radius': 900 });
+ 
+        });
+    }
+
+		$("#kubtour-poi").fadeToggle();
+	    $("#map_canvas").css('width', $('#kubtour-poi').width()+'px');
+		$("#map_canvas").css('height', $('#kubtour-poi').height()+'px');
+	   
+
+		$("#map_canvas").fadeToggle();
+		
 		
 	},
-
 
     encode: function() {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");

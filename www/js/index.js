@@ -65,12 +65,13 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             //document.getElementById("info").innerHTML = result.text;
             console.log(result);
+			alert(result.cancelled);
 		
 			$.ajax( {
                 url: result.text,
                 success:function(data) {
                   
-				  if (data != ""){
+				  if (jQuery.trim(data) != ""){
 				    $('#kubtour-poi').html(data);
 		  
                     $( function() { $( 'audio' ).audioPlayer(); } );

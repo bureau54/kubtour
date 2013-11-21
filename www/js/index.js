@@ -65,7 +65,8 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             //document.getElementById("info").innerHTML = result.text;
             console.log(result);
-			alert(result.cancelled);
+			
+			if (result.cancelled < 1){
 		
 			$.ajax( {
                 url: result.text,
@@ -77,6 +78,8 @@ var app = {
                     $( function() { $( 'audio' ).audioPlayer(); } );
 				  }
 	            }}); 
+				
+			}
 			
             
             //if (args.format == "QR_CODE") {
